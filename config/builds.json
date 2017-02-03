@@ -1,0 +1,8 @@
+{
+  "goBaseUrl": "https://build.go.cd",
+  "jenkinsBaseUrl": "http://jenkins.db.cs.cmu.edu:8080",
+  "builds": [
+    {"id": "cmu-db/peloton", "server": "Travis"},
+    {"id": "Peloton", "server": "Jenkins"}
+  ]
+}

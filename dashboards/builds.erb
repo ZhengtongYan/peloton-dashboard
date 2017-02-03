@@ -1,0 +1,47 @@
+<script type='text/javascript'>
+  $(function() {
+    Dashing.widget_base_dimensions = [370, 340];
+    Dashing.numColumns = 5
+  });
+</script>
+
+<% content_for :title do %>Peloton Dashboard<% end %>
+<div class="gridster">
+  <ul>
+    <%# Travis CI & Jenkins Build status %>
+    <%
+      if (Builds::BUILD_LIST.count > 4) then
+        num_cols = 4
+        widget_size = 1
+      else
+        num_cols = 2
+        widget_size = 2
+      end
+    %>
+    <% Builds::BUILD_LIST.each_with_index do |build, index| %>
+      <% build_num = index + 1 %>
+      <li data-row="<%= build_num % num_cols == 0 ? build_num / num_cols : build_num / num_cols + 1 %>"
+        data-col="<%= build_num % num_cols == 0 ? num_cols : build_num % num_cols %>"
+        data-sizex="<%= widget_size %>" data-sizey="1">
+        <div data-id="<%= build['id'] %>" data-server="<%= build['server'] %>"
+          data-view="BuildWindow"></div>
+      </li>
+    <% end %>
+    <%# Jenkins last commit %>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="jenkins-last-commit" data-view="Jenkinslastcommit" data-unordered="true" data-title="Last commit" ></div>
+    </li>
+    <%# Github Pull Request  %>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="github_open_pr" data-view="PullRequests" ></div>
+    </li>
+    <%# Jenkins Build  %>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="job" data-view="JenkinsBuild" data-title="Jenkins Build" data-min="0" data-max="100"></div>
+    </li>
+    <%# Coverage %>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="coverage" data-view="Hotmeter" data-title='Coverage' data-min='0' data-max='100' data-moreinfo="more info" data-cool="20" data-warm="90" data-suffix="%"></div>
+    </li>
+  </ul>
+</div>
