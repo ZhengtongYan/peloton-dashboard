@@ -6,7 +6,8 @@
 3. `dashing start`
 
 ## How to create a new widget
-Follow the steps [here](https://github.com/Shopify/dashing/wiki/Dashing-Workshop).
+Follow the steps [here](https://github.com/Shopify/dashing/wiki/Dashing-Workshop)
+
 1. `dashing generate widget <widget-name>`
     This will create a folder under widgets with widget-name. It contains three files.
     - Modify `.html` file to structure the widget.
