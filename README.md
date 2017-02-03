@@ -29,5 +29,7 @@ Follow the steps [here](https://github.com/Shopify/dashing/wiki/Dashing-Workshop
 - Get Peloton specific pull requests
 
 ## More useful widgets
-- progress bar: https://gist.github.com/mdirienzo/6716905
-- sparkline: https://gist.github.com/jorgemorgado/26068a72540619a4d4ec
+- Progress bar: https://gist.github.com/mdirienzo/6716905
+- Sparkline: https://gist.github.com/jorgemorgado/26068a72540619a4d4ec
+- Timeline: https://github.com/aysark/dashing-timeline
+- Rickshaw graph: https://gist.github.com/jwalton/6614023
