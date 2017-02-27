@@ -17,5 +17,5 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
     pulls
   }
 
-  send_event('github_open_pr', { header: "Open Pull Requests", pulls: open_pull_requests })
+  send_event('github_open_pr', { header: "Open Pull Requests", pulls: open_pull_requests.first(4) })
 end
