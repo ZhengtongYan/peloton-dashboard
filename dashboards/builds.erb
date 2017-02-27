@@ -1,6 +1,6 @@
 <script type='text/javascript'>
   $(function() {
-    Dashing.widget_base_dimensions = [370, 340];
+    Dashing.widget_base_dimensions = [420, 340];
     Dashing.numColumns = 5
   });
 </script>
@@ -8,6 +8,10 @@
 <% content_for :title do %>Peloton Dashboard<% end %>
 <div class="gridster">
   <ul>
+    <%# Logo %>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-image0="/cmu-db-group-dark.svg" data-image1="/peloton-full.svg"></div>
+    </li>
     <%# Travis CI & Jenkins Build status %>
     <%
       if (Builds::BUILD_LIST.count > 4) then
