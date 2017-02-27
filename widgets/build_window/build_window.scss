@@ -10,6 +10,11 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .title {
     color: $title-color;
+    margin-top: -100px;
+  }
+
+  .status {
+    font-size: 40px;
   }
 
   .value {
@@ -25,6 +30,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   .small {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }

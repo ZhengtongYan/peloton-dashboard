@@ -59,7 +59,7 @@ end
 
 
 #scheduled job
-SCHEDULER.every '60s' do
+SCHEDULER.every '10m' do
   begin
     #iterate over all Jenkins jobs in the hash
     $jenkins_jobs_to_be_monitored.each do |jenkins_job_name, widget_event_id|
