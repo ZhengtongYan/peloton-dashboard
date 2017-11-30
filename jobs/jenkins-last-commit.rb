@@ -8,7 +8,7 @@ require 'time'
 #Hash of all Jenkins jobs to be monitored for SCM changes, mapped to their event IDs
 #Add your Jenkins jobs & their associated unique event IDs here
 $jenkins_jobs_to_be_monitored = {
-  'Peloton' => 'jenkins-last-commit',
+  'peloton' => 'jenkins-last-commit',
 }
 
 #Trim thresholds (widget display)
