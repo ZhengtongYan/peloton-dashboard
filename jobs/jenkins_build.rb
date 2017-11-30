@@ -4,7 +4,7 @@ require 'time'
 
 # the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in jenkins
 job_mapping = {
-  'job' => { :job => 'Peloton' }
+  'job' => { :job => 'peloton' }
 }
 
 def get_number_of_failing_tests(job_name)
